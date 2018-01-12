@@ -6,5 +6,7 @@ Rails.application.routes.draw do
   get 'about' => 'pages#about', as: 'about'
 
   #creates new/update/destroy/edit... post automatically. list in GITbash -> 'rake routes'
-  resources :posts
+  resources :posts do
+  	resources :comments
+  end
 end
